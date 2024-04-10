@@ -1,0 +1,189 @@
+/* Reset default styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Akaya Kanadaka', cursive;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 10px;
+}
+
+.header h1,
+.header h2 {
+    color: #000;
+}
+
+/* Video Container Styles */
+.video-container {
+    display: flex;
+    justify-content: flex-end; /* Align video to the left */
+    align-items: center;
+    height: 50vh; /* Adjust height as needed */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.video-container video {
+    max-width: 50%; /* Set maximum width for the video */
+    max-height: 70%; /* Set maximum height for the video */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    overflow: hidden;
+}
+
+/* Main Container Styles */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Logo Styles */
+.logo {
+    width: 170px;
+    height: auto;
+}
+
+/* Navigation Styles */
+.navbar {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px;
+}
+
+/* Language Selector Styles */
+.language-selector {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.flag-icon {
+    width: 20px; /* Adjust the width as needed */
+    height: auto; /* Automatically adjust height based on width */
+    margin-right: 5px; /* Add spacing between the logo and text */
+}
+
+.selected-language {
+    margin-right: 5px;
+}
+
+.dropdown-arrow {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    transform: translateY(2px);
+}
+
+.language-menu {
+    position: absolute;
+    top: calc(100% + 5px); /* Adjust dropdown position */
+    left: 0;
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 0;
+    z-index: 1000; /* Ensure dropdown is on top of other elements */
+}
+
+.language-menu a {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.language-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mode Switch Styles */
+
+
+.toggle {
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 80px;
+        height: 40px;
+        border-radius: 50px;
+        transition: 0.2s;
+      }
+      
+      .toggle i {
+        width: 50%;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        z-index: 1;
+      }
+      
+      .toggle .ball {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+        border-radius: 50%;
+        transition: 0.3s ease-out;
+      }
+      
+      input {
+        display: none;
+      }
+      
+      .light {
+        background: #fafafa;
+      }
+      
+      .light .toggle {
+        background: linear-gradient(145deg, #e1e1e1, #fff);
+        box-shadow: 3px 3px 4px #e6e6e6, -3px -3px 4px #ffffff;
+      }
+      
+      .light .toggle .bxs-sun {
+        color: #fafafa;
+      }
+      
+      .light .toggle .bx-moon {
+        color: #414e63;
+      }
+      
+      .light .toggle .ball {
+        background:#414e63;
+      }
+      
+      .dark {
+        background: #414e63;
+      }
+      
+      .dark .toggle {
+        background: #414e63;
+        box-shadow: 3px 3px 3px #000101, -3px -3px 3px #090e14;
+      }
+      
+      .dark .toggle .bx-sun {
+        color: #fafafa;
+      }
+      
+      .dark .toggle .bxs-moon {
+        color: #414e63;
+      }
+      
+      .dark .toggle .ball {
+        background: #fafafa;
+        transform: translateX(60px);
+      }
+      
