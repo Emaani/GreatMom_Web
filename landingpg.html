@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Great Mom</title>
-    <link rel="stylesheet" href="landingpg.css"> <!-- Link to your external CSS file -->
-   
+    <link rel="stylesheet" href="landingpg.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <!-- Main Content Section -->
     <div class="container">
         <img src="greatmom1-bg-off.png" alt="Logo" class="logo">
         <nav class="navbar">
@@ -16,49 +16,38 @@
             <a href="#Community">Community</a>
             <a href="#AboutUs">About Us</a>
             <a href="#Partners">Partners</a>
-        </nav>
-
-        <!-- Language Selector -->
-        <div class="language-selector">
-            <img src="circle.png" alt="" class="flag-icon">
-            <span class="selected-language">English</span>
-            <span class="dropdown-arrow">&#9662;</span>
-            <!-- Dropdown menu -->
-            <div class="language-menu">
-                <a href="#">English</a>
-                <a href="#">French</a>
-                <a href="#">Spanish</a>
+            <div class="language-selector">
+                <span class="selected-language">English</span>
+                <span class="dropdown-arrow">&#9662;</span>
+                <div class="language-menu"></div>
             </div>
-        </div>
-
-        <div class="light">
-            <input type="checkbox" id="toggle" />
-        
-            <label class="toggle" for="toggle">
-              <i class="bx bxs-sun"></i>
-              <i class="bx bx-moon"></i>
-              <span class="ball"></span>
-            </label>
-        </div>
+            <div class="light">
+                <input type="checkbox" id="toggle" />
+                <label class="toggle" for="toggle">
+                    <i class="bx bx-sun"></i>
+                    <i class="bx bx-moon"></i>
+                    <span class="ball"></span>
+                </label>
+            </div>
+        </nav>
     </div>
-    <!-- SVG Shape -->
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path fill="#6F5393" fill-opacity="0.5" d="M0,128L30,154.7C60,181,120,235,180,245.3C240,256,300,224,360,208C420,192,480,192,540,176C600,160,660,128,720,117.3C780,107,840,117,900,101.3C960,85,1020,43,1080,58.7C1140,75,1200,149,1260,160C1320,171,1380,117,1410,90.7L1440,64L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z"></path>
     </svg>
-
-    <script src="index.js"></script>
-    <!-- Header Section -->
     <header>
-        <h1>Navigating Motherhood</h1>
-        <h2>Because being a great mom starts with taking care of yourself!</h2>
+        <h1 class="header-h1">Navigating Motherhood</h1>
+        <h2 class="header-h2">Because being a great mom starts with taking care of yourself!</h2>
     </header>
-
-    <!-- Video Section -->
     <div class="video-container">
         <video controls>
             <source src="your-video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+    <div id="content"></div>
+    <script src="index.js"></script>
+    <noscript>
+        <p>Please enable JavaScript to view this website.</p>
+    </noscript>
 </body>
 </html>

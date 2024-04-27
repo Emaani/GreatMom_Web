@@ -1,189 +1,146 @@
-/* Reset default styles */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Akaya Kanadaka', cursive;
-    position: relative;
-    box-sizing: border-box;
-}
-
-/* Header Styles */
-header {
-    text-align: center;
-    padding: 10px;
-}
-
-.header h1,
-.header h2 {
-    color: #000;
-}
-
-/* Video Container Styles */
-.video-container {
-    display: flex;
-    justify-content: flex-end; /* Align video to the left */
-    align-items: center;
-    height: 50vh; /* Adjust height as needed */
-    padding: 20px; /* Add padding for spacing */
-}
-
-.video-container video {
-    max-width: 50%; /* Set maximum width for the video */
-    max-height: 70%; /* Set maximum height for the video */
-    border-radius: 10px; /* Add border-radius for rounded corners */
-    overflow: hidden;
-}
-
-/* Main Container Styles */
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px; /* Adjust padding as needed */
 }
 
-/* Logo Styles */
-.logo {
-    width: 170px;
-    height: auto;
-}
-
-/* Navigation Styles */
 .navbar {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    width: 100%; /* Full width */
 }
 
 .navbar a {
-    padding: 10px;
+    padding: 10px 20px; /* Adjust padding as needed */
     text-decoration: none;
-    color: #000;
-    margin: 0 10px;
+    color: #6F5393;
+    background-color: rgba(255, 255, 255, 0.5); /* Very light background color */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    margin-right: 10px; /* Optional: Add spacing between links */
 }
 
-/* Language Selector Styles */
-.language-selector {
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Lighter background color on hover */
 }
 
-.flag-icon {
-    width: 20px; /* Adjust the width as needed */
-    height: auto; /* Automatically adjust height based on width */
-    margin-right: 5px; /* Add spacing between the logo and text */
+
+
+.logo {
+    max-width: 180px; /* Adjust the maximum width as needed */
+    max-height: 100px; /* Adjust the maximum height as needed */
+    width: auto;
+    height: auto;
 }
 
-.selected-language {
-    margin-right: 5px;
-}
-
-.dropdown-arrow {
-    font-size: 20px;
-    color: #000;
-    font-weight: bold;
-    transform: translateY(2px);
-}
-
+/* Language Selector Dropdown */
 .language-menu {
-    position: absolute;
-    top: calc(100% + 5px); /* Adjust dropdown position */
-    left: 0;
     display: none;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px 0;
-    z-index: 1000; /* Ensure dropdown is on top of other elements */
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.language-menu a {
+.language-menu.show {
     display: block;
-    padding: 5px 10px;
+}
+
+.language-menu span {
+    display: block;
+    padding: 10px;
     cursor: pointer;
 }
 
-.language-menu a:hover {
+.language-menu span:hover {
     background-color: #f0f0f0;
 }
 
-/* Mode Switch Styles */
-
-
+/* Dark Mode Toggle */
 .toggle {
-        cursor: pointer;
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        width: 80px;
-        height: 40px;
-        border-radius: 50px;
-        transition: 0.2s;
-      }
-      
-      .toggle i {
-        width: 50%;
-        line-height: 40px;
-        text-align: center;
-        font-size: 18px;
-        z-index: 1;
-      }
-      
-      .toggle .ball {
-        position: absolute;
-        width: 30px;
-        height: 30px;
-        margin: 5px;
-        border-radius: 50%;
-        transition: 0.3s ease-out;
-      }
-      
-      input {
-        display: none;
-      }
-      
-      .light {
-        background: #fafafa;
-      }
-      
-      .light .toggle {
-        background: linear-gradient(145deg, #e1e1e1, #fff);
-        box-shadow: 3px 3px 4px #e6e6e6, -3px -3px 4px #ffffff;
-      }
-      
-      .light .toggle .bxs-sun {
-        color: #fafafa;
-      }
-      
-      .light .toggle .bx-moon {
-        color: #414e63;
-      }
-      
-      .light .toggle .ball {
-        background:#414e63;
-      }
-      
-      .dark {
-        background: #414e63;
-      }
-      
-      .dark .toggle {
-        background: #414e63;
-        box-shadow: 3px 3px 3px #000101, -3px -3px 3px #090e14;
-      }
-      
-      .dark .toggle .bx-sun {
-        color: #fafafa;
-      }
-      
-      .dark .toggle .bxs-moon {
-        color: #414e63;
-      }
-      
-      .dark .toggle .ball {
-        background: #fafafa;
-        transform: translateX(60px);
-      }
-      
+    cursor: pointer;
+    position: absolute;
+    top: 20px; /* Adjust top position as needed */
+    right: 100px; /* Adjust right position as needed */
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    height: 40px;
+    border-radius: 50px;
+    transition: 0.2s;
+    background: #fafafa;
+    box-shadow: 3px 3px 4px #e6e6e6, -3px -3px 4px #ffffff;
+}
+
+.toggle i {
+    width: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 18px;
+    z-index: 1;
+    color: #414e63;
+}
+
+.toggle .ball {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    border-radius: 50%;
+    transition: 0.3s ease-out;
+    background: #414e63;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .toggle .bx-sun {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .toggle .bx-moon {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .toggle .ball {
+    transform: translateX(40px);
+}
+
+/* Dark Mode Styles */
+.dark {
+    background: #96969e;
+    color: #6F5393; /* Adjust text color for dark mode */
+}
+
+.dark .toggle {
+    background: #414e63;
+    box-shadow: 3px 3px 3px #000101, -3px -3px 3px #090e14;
+}
+
+.dark .toggle .bx-sun {
+    color: #fafafa;
+}
+
+.dark .toggle .bx-moon {
+    color: #c0b4b4;
+}
+
+.dark .toggle .ball {
+    background: #fafafa;
+}
+
+.dark input[type="checkbox"]:checked + .toggle .bx-sun {
+    display: none;
+}
+
+.dark input[type="checkbox"]:checked + .toggle .bx-moon {
+    display: none;
+}
+
+.dark input[type="checkbox"]:checked + .toggle .ball {
+    transform: translateX(40px);
+}
