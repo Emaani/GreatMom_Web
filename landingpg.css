@@ -36,7 +36,7 @@
 /* Language Selector Dropdown */
 .language-menu {
     display: none;
-    position: absolute;
+    position: right;
     top: 20px; /* Adjust top position as needed */
     right: 20px; /* Adjust right position as needed */
     background-color: #f9f9f9;
@@ -56,15 +56,14 @@
 }
 
 .language-menu span:hover {
-    background-color: #f0f0f0;
+    background-color: #bab6b6;
 }
 
 /* Dark Mode Toggle */
 .toggle {
     cursor: pointer;
-    position: absolute;
-    top: 20px; /* Adjust top position as needed */
-    right: 100px; /* Adjust right position as needed */
+    position:absolute;   
+    right: 10px; /* Adjust right position as needed */
     display: flex;
     justify-content: space-between;
     width: 80px;
